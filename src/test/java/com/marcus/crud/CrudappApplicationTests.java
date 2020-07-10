@@ -1,10 +1,10 @@
-package com.kindsonthegenius.fleetapp;
+package com.marcus.crud;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FleetappApplicationTests {
+class CrudappApplicationTests {
 
 	@Test
 	void contextLoads() {
