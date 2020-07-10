@@ -29,10 +29,9 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 		.formLogin()
 		.loginPage("/login").permitAll()
 		.and()
-		.logout().invalidateHttpSession(true)
-		.clearAuthentication(true)
+		.logout().invalidateHttpSession(true).clearAuthentication(true)
 		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-		.logoutSuccessUrl("/login").permitAll();
+		.logoutSuccessUrl("/login").deleteCookies("JSESSIONID").permitAll();
 	}
 		
 	@Bean
