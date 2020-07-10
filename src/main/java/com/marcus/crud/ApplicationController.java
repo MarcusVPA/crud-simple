@@ -2,6 +2,7 @@ package com.marcus.crud;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ApplicationController {
@@ -24,6 +25,12 @@ public class ApplicationController {
 	@GetMapping("/register")
 	public String goRegister() {
 		return "register";
+	}
+	
+	@GetMapping("/error")
+	@ResponseBody
+	public String goError() {
+		return "error";
 	}
 	
 
